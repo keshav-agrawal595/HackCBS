@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "soundFile": "fallback.wav",
+    "duration": 1
+  },
+  "mouthCues": [
+    {
+      "time": 0,
+      "value": "X"
+    },
+    {
+      "time": 0.2,
+      "value": "A"
+    },
+    {
+      "time": 0.4,
+      "value": "B"
+    },
+    {
+      "time": 0.6,
+      "value": "C"
+    },
+    {
+      "time": 0.8,
+      "value": "A"
+    },
+    {
+      "time": 1,
+      "value": "X"
+    }
+  ]
+}
