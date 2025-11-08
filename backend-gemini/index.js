@@ -328,7 +328,7 @@ app.post("/api/chat",authMiddleware, async (req, res) => {
     }
 
     // Using Gemini API instead of OpenAI
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });    
     const prompt = `
       You are a virtual co-passenger and the heart of the car.
       You live in the infotainment screen and interact with the driver like a friendly travel companion.
