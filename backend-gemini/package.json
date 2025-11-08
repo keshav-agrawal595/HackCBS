@@ -18,7 +18,8 @@
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.19.2",
-    "openai": "^4.26.0"
+    "openai": "^4.26.0",
+    "wawa-lipsync": "^0.0.2"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"

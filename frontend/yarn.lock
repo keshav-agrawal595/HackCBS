@@ -2325,6 +2325,11 @@ vite@^4.1.0, vite@^4.1.0-beta.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
+wawa-lipsync@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.npmjs.org/wawa-lipsync/-/wawa-lipsync-0.0.2.tgz"
+  integrity sha512-aW4vKMOBRsv2RnPugzB0fF0ln1ni3kE3INks9xxeQ8+RnL6uZZzenzn/dwdwji8BBD8IboJBatFj/WkoyyYaew==
+
 webgl-constants@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/webgl-constants/-/webgl-constants-1.1.1.tgz"
