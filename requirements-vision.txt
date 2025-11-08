@@ -1,0 +1,10 @@
+flask
+flask-cors
+opencv-python
+torch
+torchvision
+pillow
+imagehash
+aiohttp
+python-dotenv
+numpy

@@ -150,7 +150,7 @@ async def process_image_with_gemini(image_path):
     api_key = os.getenv("GEMINI_API_KEY")
     
     # Gemini API endpoint
-    api_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent?key={api_key}"
+    api_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key={api_key}"
     
     # Encode image to base64
     base64_image = encode_image_to_base64(image_path)

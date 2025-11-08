@@ -13,6 +13,7 @@ export const ChatProvider = ({ children }) => {
     // Loading is exposed to the controller (Screen.jsx)
     const [loading, setLoading] = useState(false); 
     const [cameraZoomed, setCameraZoomed] = useState(true);
+    const [isAnalyzingVision, setIsAnalyzingVision] = useState(false);
 
     // New function: Screen.jsx calls this when it gets a response from the server
     const startBotResponse = (messagesArray) => {
@@ -41,6 +42,8 @@ export const ChatProvider = ({ children }) => {
                 loading, 
                 cameraZoomed,
                 setCameraZoomed,
+                isAnalyzingVision,
+                setIsAnalyzingVision,
             }}
         >
             {children}

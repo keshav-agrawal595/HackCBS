@@ -13,7 +13,7 @@ import { useChat } from '../../hooks/useChat';
 function Screen() {
     const { token, API_URL } = useAuth();
     // Use the functions from the refactored useChat hook
-    const { startBotResponse, setLoading } = useChat(); 
+    const { startBotResponse, setLoading, setIsAnalyzingVision } = useChat(); 
 
     // --- CHAT HISTORY STATE ---
     const [messages, setMessages] = useState([]); 
@@ -63,14 +63,35 @@ function Screen() {
         setLoading(true); 
 
         try {
-            // 2. Call the protected API with the token
+            // Check if vision analysis is needed (trigger keywords)
+            const visionTriggers = ['visualize', 'look around', 'what do you see', 'describe surroundings', 'describe environment', 'what\'s around', 'scan environment', 'analyze surroundings', 'check surroundings'];
+            const isVisionRequest = visionTriggers.some(trigger => 
+                userMessageText.toLowerCase().includes(trigger)
+            );
+
+            // Show vision analyzing indicator if it's a vision request
+            if (isVisionRequest) {
+                setIsAnalyzingVision(true);
+            }
+
+            // 2. Call the protected API with the token and video URL if needed
+            const requestBody = { 
+                message: userMessageText
+            };
+            
+            // Add video URL for vision requests
+            if (isVisionRequest) {
+                // You can configure this URL or get it from settings
+                requestBody.videoUrl = 'http://10.52.26.19:8080/video';
+            }
+
             const res = await fetch(`${API_URL}/chat`, { 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}` // 👈 Authentication
                 },
-                body: JSON.stringify({ message: userMessageText })
+                body: JSON.stringify(requestBody)
             });
             
             if (!res.ok) throw new Error(`Chat API failed with status ${res.status}.`);
@@ -106,6 +127,7 @@ function Screen() {
             }]);
         } finally {
             setLoading(false);
+            setIsAnalyzingVision(false);
         }
     };
 

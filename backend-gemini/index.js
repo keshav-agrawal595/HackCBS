@@ -36,7 +36,7 @@ mongoose.connect(process.env.MONGODB_URI)
   .catch(err => console.error("MongoDB Connection Error:", err));
 
 // Path to the Rhubarb executable with complete path
-const rhubarbPath = "D:\\KKY_Brothers\\Codes\\Advanced_ML_Projects\\AI Avatar Assistant\\backend-gemini\\bin\\Rhubarb-Lip-Sync-1.14.0-Windows\\rhubarb.exe";
+const rhubarbPath = "D:\\KKY_Brothers\\Codes\\Advanced_ML_Projects\\HackCBS\\backend-gemini\\bin\\Rhubarb-Lip-Sync-1.14.0-Windows\\rhubarb.exe";
 
 
 const ensureDirectoryExists = async (directory) => {
@@ -175,6 +175,50 @@ const createFallbackFiles = async () => {
   }
 };
 
+// Vision service integration
+const callVisionService = async (videoUrl) => {
+  try {
+    console.log("Calling vision service with URL:", videoUrl);
+    const response = await axios.post('http://localhost:5000/analyze-environment', {
+      video_url: videoUrl
+    }, {
+      timeout: 60000 // 60 second timeout (increased from 30s)
+    });
+    
+    if (response.data.success) {
+      console.log("Vision analysis successful:", response.data.frames_captured, "frames");
+      return response.data.description;
+    } else {
+      throw new Error(response.data.error || "Vision service failed");
+    }
+  } catch (error) {
+    if (error.code === 'ECONNABORTED') {
+      console.error("Vision service timeout - took longer than 60 seconds");
+    } else {
+      console.error("Vision service error:", error.message);
+    }
+    return null;
+  }
+};
+
+// Check if message contains trigger keywords for vision analysis
+const shouldTriggerVision = (message) => {
+  const triggers = [
+    'visualize',
+    'look around',
+    'what do you see',
+    'describe surroundings',
+    'describe environment',
+    'what\'s around',
+    'scan environment',
+    'analyze surroundings',
+    'check surroundings'
+  ];
+  
+  const lowerMessage = message.toLowerCase();
+  return triggers.some(trigger => lowerMessage.includes(trigger));
+};
+
 app.post("/api/chat",authMiddleware, async (req, res) => {
   console.log(`Chat request from user ${req.user.email}`);
   
@@ -182,7 +226,22 @@ app.post("/api/chat",authMiddleware, async (req, res) => {
     await ensureDirectoryExists("audios");
     await createFallbackFiles();
 
-    const userMessage = req.body.message;
+    let userMessage = req.body.message;
+    const videoUrl = req.body.videoUrl || 'http://10.52.26.19:8080/video';
+    
+    // Check if vision analysis should be triggered
+    if (userMessage && shouldTriggerVision(userMessage)) {
+      console.log("Triggering vision analysis...");
+      const visionDescription = await callVisionService(videoUrl);
+      
+      if (visionDescription) {
+        // Replace the user message with the vision description for AI processing
+        userMessage = `Based on what I'm seeing in the environment: ${visionDescription}. Please respond naturally as a co-passenger describing what you see.`;
+      } else {
+        userMessage = "I tried to look around but I'm having trouble accessing the camera right now. Let me know if you need anything else!";
+      }
+    }
+    
     if (!userMessage) {
       // Check if intro files exist
       try {
@@ -269,7 +328,7 @@ app.post("/api/chat",authMiddleware, async (req, res) => {
     }
 
     // Using Gemini API instead of OpenAI
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-exp-image-generation" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
     const prompt = `
       You are a virtual co-passenger and the heart of the car.
       You live in the infotainment screen and interact with the driver like a friendly travel companion.
@@ -296,8 +355,31 @@ app.post("/api/chat",authMiddleware, async (req, res) => {
       }
     `;
 
-    const result = await model.generateContent(prompt);
-    const rawResponse = result.response.text();
+    let result;
+    let rawResponse;
+    
+    try {
+      result = await model.generateContent(prompt);
+      rawResponse = result.response.text();
+    } catch (apiError) {
+      console.error("Gemini API Error:", apiError);
+      console.error("Error details:", {
+        message: apiError.message,
+        cause: apiError.cause,
+        stack: apiError.stack
+      });
+      
+      // Return a fallback response
+      return res.send({
+        messages: [{
+          text: "I'm having trouble connecting to my brain right now. Please check your internet connection and try again!",
+          facialExpression: "sad",
+          animation: "Idle",
+          audio: null,
+          lipsync: await readJsonTranscript(path.join("audios", "fallback.json"))
+        }]
+      });
+    }
     
     // Extract JSON from the response (Gemini sometimes wraps JSON in markdown code blocks)
     let jsonMatch = rawResponse.match(/```json\n([\s\S]*?)\n```/) || 
