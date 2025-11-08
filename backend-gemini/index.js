@@ -293,7 +293,7 @@ app.post("/api/chat",authMiddleware, async (req, res) => {
         const api1Lipsync = await readJsonTranscript(path.join("audios", "api_1.json"));
         
         res.send({
-          messages: [
+          messages: [ 
             {
               text: "Please my dear, don't forget to add your API keys!",
               audio: api0Audio,
