@@ -2,7 +2,7 @@
 
 # 🚗 Vision-Enabled AI Co-Passenger
 
-### Your intelligent in-car companion with eyes, voice, and personality
+### *Your intelligent in-car companion with eyes, voice, and personality*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-16+-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
@@ -13,7 +13,7 @@
 [![Gemini](https://img.shields.io/badge/Google-Gemini_AI-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
 [![ElevenLabs](https://img.shields.io/badge/ElevenLabs-TTS-6366F1)](https://elevenlabs.io/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Made with ❤](https://img.shields.io/badge/Made%20with-❤-red.svg)](https://github.com)
+[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com)
 [![Status](https://img.shields.io/badge/Status-Active-success)](https://github.com)
 
 <p align="center">
@@ -24,7 +24,7 @@
 
 [🎬 Watch Demo](#-preview--demo) • 
 [✨ Features](#-features) • 
-[🏗 Architecture](#-architecture) • 
+[🏗️ Architecture](#️-architecture) • 
 [🚀 Quick Start](#-quick-start) • 
 [🔌 API Reference](#-api-reference) • 
 [🤝 Contributing](#-contributing)
@@ -38,7 +38,7 @@
 - [🎬 Preview & Demo](#-preview--demo)
 - [✨ Features](#-features)
 - [🧠 Tech Stack](#-tech-stack)
-- [🏗 Architecture](#-architecture)
+- [🏗️ Architecture](#️-architecture)
 - [💡 How It Works](#-how-it-works)
 - [🚀 Quick Start](#-quick-start)
 - [🔌 API Reference](#-api-reference)
@@ -59,11 +59,11 @@
 
 ### What You'll Experience
 
-- 🗣 *Natural Conversations* – Talk to your AI co-passenger like a friend  
-- 👁 *Visual Understanding* – “Look around” and get real-time scene descriptions  
-- 🎭 *Expressive Avatar* – Emotions & lip-sync come alive in 3D  
-- 🔊 *Lifelike Speech* – Neural TTS with natural tone & timing  
-- 🗺 *Smart Context* – Navigation, weather, and awareness combined  
+- 🗣️ **Natural Conversations** – Talk to your AI co-passenger like a friend  
+- 👁️ **Visual Understanding** – “Look around” and get real-time scene descriptions  
+- 🎭 **Expressive Avatar** – Emotions & lip-sync come alive in 3D  
+- 🔊 **Lifelike Speech** – Neural TTS with natural tone & timing  
+- 🗺️ **Smart Context** – Navigation, weather, and awareness combined  
 
 ---
 
@@ -75,17 +75,17 @@
 
 ### 🎯 Core Capabilities
 
-- ✅ *Multi-Modal AI*
+- ✅ **Multi-Modal AI**
   - Gemini Vision API for visual analysis  
   - Gemini Pro for natural conversation  
   - Real-time multi-sensor fusion  
 
-- ✅ *3D Avatar System*
+- ✅ **3D Avatar System**
   - Emotion-based facial expressions  
   - Rhubarb-powered accurate lip-sync  
   - Real-time animation blending  
 
-- ✅ *Speech & Audio*
+- ✅ **Speech & Audio**
   - ElevenLabs neural TTS  
   - Multi-language voices  
   - Emotion-adaptive tone  
@@ -93,19 +93,19 @@
 </td>
 <td width="50%">
 
-### 🛠 Advanced Features
+### 🛠️ Advanced Features
 
-- ✅ *Authentication & Persistence*
+- ✅ **Authentication & Persistence**
   - JWT-secured sessions  
   - MongoDB chat history  
   - Persistent login  
 
-- ✅ *Vision Triggers*
+- ✅ **Vision Triggers**
   - Keyword detection (“visualize”, “look around”)  
   - Multi-frame analysis  
   - Context-aware replies  
 
-- ✅ *Smart Integrations*
+- ✅ **Smart Integrations**
   - Google Maps + Weather APIs  
   - Object detection via TensorFlow.js  
   - Real-time camera feed  
@@ -120,7 +120,7 @@
 
 <div align="center">
 
-### ⚛ Frontend
+### ⚛️ Frontend
 
 [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -147,11 +147,11 @@
 
 ---
 
-## 🏗 Architecture
+## 🏗️ Architecture
 
 ### 🧩 System Overview
 
-mermaid
+```mermaid
 graph TB
     subgraph UI_Layer["🎨 User Interface Layer"]
         UI[React Frontend<br>Vite + Three.js]
@@ -212,19 +212,19 @@ graph TB
     style Weather fill:#ffb300,stroke:#000,stroke-width:1.5px,color:#000
     style Camera fill:#ff7043,stroke:#000,stroke-width:1.5px,color:#000
 
-
+```
 
 ---
 
-##   Quick Start
+## � Quick Start
 
 ### Prerequisites
 
-- ✅ *Node.js* 16+ ([Download](https://nodejs.org/))
-- ✅ *Python* 3.8+ ([Download](https://www.python.org/))
-- ✅ *MongoDB* ([Install](https://www.mongodb.com/try/download/community))
-- ✅ *FFmpeg* (for audio conversion)
-- ✅ *Git* (optional)
+- ✅ **Node.js** 16+ ([Download](https://nodejs.org/))
+- ✅ **Python** 3.8+ ([Download](https://www.python.org/))
+- ✅ **MongoDB** ([Install](https://www.mongodb.com/try/download/community))
+- ✅ **FFmpeg** (for audio conversion)
+- ✅ **Git** (optional)
 
 ### API Keys Required
 
@@ -232,25 +232,25 @@ graph TB
 |---------|---------|---------|
 | 🤖 Google Gemini | Chat & Vision AI | [Get Key](https://makersuite.google.com/app/apikey) |
 | 🔊 ElevenLabs | Text-to-Speech | [Get Key](https://elevenlabs.io/) |
-| 🗺 Google Maps (optional) | Navigation | [Get Key](https://developers.google.com/maps) |
+| 🗺️ Google Maps (optional) | Navigation | [Get Key](https://developers.google.com/maps) |
 
 ### The Complete Interaction Pipeline
 
-mermaid
+```mermaid
 flowchart TD
     Start([👤 User Interaction]) --> Input{🎤 Input Type?}
     
     Input -->|💬 Text Message| CheckTrigger[🔍 Check for Vision Trigger]
-    Input -->|🗣 Voice Command| STT[🎙 Speech-to-Text]
+    Input -->|🗣️ Voice Command| STT[🎙️ Speech-to-Text]
     
     STT --> CheckTrigger
     
-    CheckTrigger -->|🔍 Contains Trigger| VisionFlow[👁 Vision Analysis Flow]
+    CheckTrigger -->|🔍 Contains Trigger| VisionFlow[👁️ Vision Analysis Flow]
     CheckTrigger -->|💬 Normal Chat| ChatFlow[🤖 Standard Chat Flow]
     
     VisionFlow --> CaptureFrames[📹 Capture N Clear Frames]
     CaptureFrames --> QualityCheck{✅ Quality OK?}
-    QualityCheck -->|✅ Yes| CombineFrames[🖼 Combine into Grid Image]
+    QualityCheck -->|✅ Yes| CombineFrames[🖼️ Combine into Grid Image]
     QualityCheck -->|❌ No| CaptureFrames
     
     CombineFrames --> SaveImage[💾 Save to Disk]
@@ -269,7 +269,7 @@ flowchart TD
     
     Package --> SendToFrontend[📤 Send to Frontend]
     SendToFrontend --> RenderAvatar[🎭 Render 3D Avatar]
-    RenderAvatar --> PlayAudio[▶ Play Audio]
+    RenderAvatar --> PlayAudio[▶️ Play Audio]
     PlayAudio --> SyncAnimation[🎬 Sync Animation + Lip-sync]
     SyncAnimation --> UpdateUI[🔄 Update Chat History]
     
@@ -281,51 +281,51 @@ flowchart TD
     style GeminiChat fill:#34A853
     style GenerateAudio fill:#6366F1
     style RenderAvatar fill:#61dafb
-
+```
 
 </div>
 
 | Layer | Technologies |
 |-------|-------------|
-| *Frontend* | React, Vite, Three.js, TailwindCSS |
-| *Backend* | Node.js, Express, JWT, Mongoose |
-| *Vision* | Python, Flask, OpenCV, PyTorch |
-| *AI* | Google Gemini (Pro + Vision) |
-| *Speech* | ElevenLabs TTS, Rhubarb Lip-Sync |
-| *Database* | MongoDB |
+| **Frontend** | React, Vite, Three.js, TailwindCSS |
+| **Backend** | Node.js, Express, JWT, Mongoose |
+| **Vision** | Python, Flask, OpenCV, PyTorch |
+| **AI** | Google Gemini (Pro + Vision) |
+| **Speech** | ElevenLabs TTS, Rhubarb Lip-Sync |
+| **Database** | MongoDB |
 
 ## 🚀 Quick Start
 
 ### 1) Install dependencies
 
-powershell
+```powershell
 pip install -r requirements-vision.txt
 cd backend-gemini && npm install && cd ..
 cd frontend && npm install && cd ..
-
+```
 
 ### 2) Configure environment
 
-Create a .env file (see backend-gemini/.env.example). Minimum variables:
+Create a .env file (see `backend-gemini/.env.example`). Minimum variables:
 
-
+```
 GEMINI_API_KEY=your_gemini_api_key
 ELEVEN_LABS_API_KEY=your_elevenlabs_api_key
 MONGODB_URI=mongodb://localhost:27017/ai_chatbot_db
-
+```
 
 If you use a phone camera, set your video stream URL in two places:
 
-- vision-service.py → default for video_url
-- frontend/src/components/HomeScreen/Screen.jsx → requestBody.videoUrl
+- `vision-service.py` → default for `video_url`
+- `frontend/src/components/HomeScreen/Screen.jsx` → requestBody.videoUrl
 
-Android: IP Webcam (http://PHONE_IP:8080/video) • DroidCam (http://PHONE_IP:4747/video)
+Android: IP Webcam (`http://PHONE_IP:8080/video`) • DroidCam (`http://PHONE_IP:4747/video`)
 
 ### 3) Start everything (Windows)
 
-powershell
+```powershell
 ./start-all-services.ps1
-
+```
 
 This opens three terminals: Vision (5000), Backend (3000), Frontend (5173).
 
@@ -343,33 +343,33 @@ You’ll see an “Analyzing surroundings…” banner while frames are captured
 ## Configuration (Advanced)
 
 ### Rhubarb Lip‑Sync Path (Windows)
-Update in backend-gemini/index.js if needed:
-js
+Update in `backend-gemini/index.js` if needed:
+```js
 const rhubarbPath = "D:\\...\\backend-gemini\\bin\\Rhubarb-Lip-Sync-1.14.0-Windows\\rhubarb.exe";
-
+```
 
 ### Vision Tuning
-Edit vision-service.py:
-- num_frames: number of frames to combine (default 4)
-- frame_skip: capture stride (default 5)
-- laplacian_threshold: quality check threshold
+Edit `vision-service.py`:
+- `num_frames`: number of frames to combine (default 4)
+- `frame_skip`: capture stride (default 5)
+- `laplacian_threshold`: quality check threshold
 
 ### Custom Trigger Keywords
-Add in backend-gemini/index.js → shouldTriggerVision()
+Add in `backend-gemini/index.js` → `shouldTriggerVision()`
 -->
 
 <!-- 
 ## API Reference
 
-*Backend* (http://localhost:3000)
-- POST /api/auth/signup — Create user
-- POST /api/auth/login — Get JWT token
-- POST /api/chat (JWT) — Send message: { message, videoUrl? }
-- GET /api/chat-history (JWT) — List chat sessions
+**Backend** (http://localhost:3000)
+- `POST /api/auth/signup` — Create user
+- `POST /api/auth/login` — Get JWT token
+- `POST /api/chat` (JWT) — Send message: `{ message, videoUrl? }`
+- `GET /api/chat-history` (JWT) — List chat sessions
 
-*Vision Service* (http://localhost:5000)
-- GET /health — Health check
-- POST /analyze-environment — Analyze video: { video_url }
+**Vision Service** (http://localhost:5000)
+- `GET /health` — Health check
+- `POST /analyze-environment` — Analyze video: `{ video_url }`
 
 Full API documentation in ARCHITECTURE.md
 -->
@@ -383,20 +383,20 @@ Full API documentation in ARCHITECTURE.md
 
 ### Authentication Endpoints
 
-#### POST /api/auth/signup
+#### `POST /api/auth/signup`
 Create a new user account.
 
-*Request:*
-json
+**Request:**
+```json
 {
   "email": "user@example.com",
   "password": "securepassword123",
   "name": "John Doe"
 }
+```
 
-
-*Response:*
-json
+**Response:**
+```json
 {
   "token": "eyJhbGciOiJIUzI1NiIs...",
   "user": {
@@ -405,49 +405,49 @@ json
     "name": "John Doe"
   }
 }
-
+```
 
 ---
 
-#### POST /api/auth/login
+#### `POST /api/auth/login`
 Authenticate existing user.
 
-*Request:*
-json
+**Request:**
+```json
 {
   "email": "user@example.com",
   "password": "securepassword123"
 }
+```
 
-
-### Backend API (http://localhost:3000)
+### Backend API (`http://localhost:3000`)
 | Method | Endpoint | Protection | Description |
 |--------|----------|------------|-------------|
-| POST | /api/auth/signup | Public | Creates a new user account. |
-| POST | /api/auth/login | Public | Authenticates a user and returns a JWT. |
-| POST | /api/chat | JWT | Sends a message for processing and gets a response. |
-| GET | /api/chat-history | JWT | Retrieves the list of all chat sessions for the user. |
-| GET | /api/chat-history/:id| JWT | Retrieves a specific chat session by its ID. |
-| GET | /voices | Public | Fetches available TTS voices from ElevenLabs. |
+| `POST` | `/api/auth/signup` | Public | Creates a new user account. |
+| `POST` | `/api/auth/login` | Public | Authenticates a user and returns a JWT. |
+| `POST` | `/api/chat` | JWT | Sends a message for processing and gets a response. |
+| `GET` | `/api/chat-history` | JWT | Retrieves the list of all chat sessions for the user. |
+| `GET` | `/api/chat-history/:id`| JWT | Retrieves a specific chat session by its ID. |
+| `GET` | `/voices` | Public | Fetches available TTS voices from ElevenLabs. |
 
-### Vision Service API (http://localhost:5000)
+### Vision Service API (`http://localhost:5000`)
 | Method | Endpoint | Protection | Description |
 |--------|----------|------------|-------------|
-| GET | /health | Public | Checks if the vision service is running. |
-| POST | /analyze-environment | Public | Receives a video URL, analyzes it, and returns a description. |
+| `GET` | `/health` | Public | Checks if the vision service is running. |
+| `POST` | `/analyze-environment` | Public | Receives a video URL, analyzes it, and returns a description. |
 
 ### Sample Chat Request/Response
 
-*Request:*
-json
+**Request:**
+```json
 {
   "message": "visualize the environment",
   "videoUrl": "http://192.168.1.100:8080/video"
 }
+```
 
-
-*Response:*
-json
+**Response:**
+```json
 {
   "messages": [
     {
@@ -462,7 +462,7 @@ json
     }
   ]
 }
-
+```
 
 </details>
 
@@ -474,23 +474,23 @@ We welcome contributions! Here's how you can help:
 
 ### Ways to Contribute
 
-- 🐛 *Report bugs* → [Open an issue](https://github.com/yourusername/repo/issues)
-- ✨ *Suggest features* → [Feature request](https://github.com/yourusername/repo/issues/new)
-- 📝 *Improve docs* → Submit a PR
-- 🧪 *Write tests* → Add test coverage
-- 🎨 *Design assets* → UI/UX improvements
-- 🌐 *Translations* → Multi-language support
+- 🐛 **Report bugs** → [Open an issue](https://github.com/yourusername/repo/issues)
+- ✨ **Suggest features** → [Feature request](https://github.com/yourusername/repo/issues/new)
+- 📝 **Improve docs** → Submit a PR
+- 🧪 **Write tests** → Add test coverage
+- 🎨 **Design assets** → UI/UX improvements
+- 🌐 **Translations** → Multi-language support
 
 ### Development Workflow
 
-1. *Fork* the repository
-2. *Clone* your fork
-3. *Create* a feature branch
-4. *Make* your changes
-5. *Test* thoroughly
-6. *Commit* with clear messages
-7. *Push* to your fork
-8. *Open* a Pull Request
+1. **Fork** the repository
+2. **Clone** your fork
+3. **Create** a feature branch
+4. **Make** your changes
+5. **Test** thoroughly
+6. **Commit** with clear messages
+7. **Push** to your fork
+8. **Open** a Pull Request
 
 For detailed guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -498,9 +498,9 @@ For detailed guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## 📄 License
 
-This project is licensed under the *MIT License*.
+This project is licensed under the **MIT License**.
 
-
+```
 MIT License
 
 Copyright (c) 2025 AI Co-Passenger Contributors
@@ -518,7 +518,7 @@ copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-
+```
 
 See [LICENSE](LICENSE) for full text.
 
@@ -528,38 +528,38 @@ See [LICENSE](LICENSE) for full text.
 
 ### Technologies & Services
 
-- 🤖 *[Google Gemini](https://ai.google.dev/)* - Conversational AI & Vision understanding
-- 🔊 *[ElevenLabs](https://elevenlabs.io/)* - Neural text-to-speech
-- 👄 *[Rhubarb Lip Sync](https://github.com/DanielSWolf/rhubarb-lip-sync)* - Automatic mouth animation
-- 🎨 *[Three.js](https://threejs.org/)* - WebGL 3D rendering
-- ⚛ *[React](https://react.dev/)* - UI framework
-- ⚡ *[Vite](https://vitejs.dev/)* - Build tool
-- 🎭 *[Mixamo](https://www.mixamo.com/)* - 3D character animations
+- 🤖 **[Google Gemini](https://ai.google.dev/)** - Conversational AI & Vision understanding
+- 🔊 **[ElevenLabs](https://elevenlabs.io/)** - Neural text-to-speech
+- 👄 **[Rhubarb Lip Sync](https://github.com/DanielSWolf/rhubarb-lip-sync)** - Automatic mouth animation
+- 🎨 **[Three.js](https://threejs.org/)** - WebGL 3D rendering
+- ⚛️ **[React](https://react.dev/)** - UI framework
+- ⚡ **[Vite](https://vitejs.dev/)** - Build tool
+- 🎭 **[Mixamo](https://www.mixamo.com/)** - 3D character animations
 
 ### Special Thanks
 
 - 🌟 All contributors and testers
 - 💬 The open-source community  
-- 🎓 *HackCBS 8.0* Hackathon organizers
+- 🎓 **HackCBS 8.0** Hackathon organizers
 - ☕ Coffee for late-night coding sessions
 
 ---
 
 <div align="center">
 
-### 💖 Made with love by *Keshav* and *Sanskar* for *Hack CBS 8.0* 🏆
+### 💖 Made with love by **Sanskar** and **Keshav** for **Hack CBS 8.0** 🏆
 
-Built during HackCBS 8.0 Hackathon, 2025
+*Built during HackCBS 8.0 Hackathon, 2025*
 
-🚗 Happy driving with your intelligent co‑passenger 👁🤖
+🚗 Happy driving with your intelligent co‑passenger 👁️🤖
 
 ### 💫 If you found this project helpful, please consider:
 
 [![Star this repo](https://img.shields.io/github/stars/yourusername/repo?style=social)](https://github.com/yourusername/repo)
 [![Follow on GitHub](https://img.shields.io/github/followers/yourusername?style=social)](https://github.com/yourusername)
 
-*Made with ❤ and lots of ☕*
+**Made with ❤️ and lots of ☕**
 
-[⬆ Back to Top](#-vision-enabled-ai-co-passenger)
+[⬆️ Back to Top](#-vision-enabled-ai-co-passenger)
 
 </div>
