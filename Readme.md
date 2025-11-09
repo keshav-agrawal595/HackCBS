@@ -49,11 +49,16 @@
 ---
 
 ## 🎬 Preview & Demo
+<img width="1919" height="911" alt="image" src="https://github.com/user-attachments/assets/ecd6aebc-cc51-4299-a8c7-24cf97b25ab3" />
 
 <details>
 <summary>🎥 Click to view demo video</summary>
 
-<video src="Car_Assistant_Record_final.mp4" controls width="720"></video>
+
+https://github.com/user-attachments/assets/2a5437e8-bc62-46c9-9ce6-717594b91180
+
+
+<video src="" controls width="720"></video>
 
 </details>
 
