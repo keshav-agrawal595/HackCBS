@@ -552,7 +552,7 @@ See [LICENSE](LICENSE) for full text.
 
 <div align="center">
 
-### 💖 Made with love by **Sanskar** and **Keshav** for **Hack CBS 8.0** 🏆
+### 💖 Made with love by **Keshav** and **Sanskar** for **Hack CBS 8.0** 🏆
 
 *Built during HackCBS 8.0 Hackathon, 2025*
 
